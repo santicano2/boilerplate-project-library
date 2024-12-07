@@ -78,7 +78,7 @@ module.exports = function (app) {
           comments: book.comments,
         });
       } catch (err) {
-        return res.status(500).json({ error: "Error retrieving book" });
+        return res.status(500).send("no book exists");
       }
     })
 
@@ -126,7 +126,7 @@ module.exports = function (app) {
 
         return res.send("delete successful");
       } catch (err) {
-        return res.status(500).json({ error: "Error deleting book" });
+        return res.send("no book exists");
       }
     });
 };
