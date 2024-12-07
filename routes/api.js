@@ -41,7 +41,7 @@ module.exports = function (app) {
         });
 
         const savedBook = await newBook.save();
-        res.status(201).json({
+        res.status(200).json({
           _id: savedBook._id,
           title: savedBook.title,
         });
